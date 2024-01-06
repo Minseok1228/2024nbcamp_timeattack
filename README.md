@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 2024 내배캠 타임어택
 
-## Getting Started
+### 타임어택 과제 목표
 
-First, run the development server:
+1. Next.js를 사용하여 로그인 및 회원가입 페이지 및 폼을 구현합니다.
+2. 상태 관리를 위해 Redux를 사용합니다.
+3. 라우팅 및 페이지 네비게이션을 구현합니다.
+4. 에러 핸들링 및 보안을 고려합니다.
+5. API 인증서버는 심화과제 인증서버를 사용하여 연동할 수 있습니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 요구 조건
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [x] 프로젝트 설정
+- [x] 페이지 및 라우팅 구현
+- [x] 회원가입 및 로그인 폼 구현
+- [x] 상태 관리 구현
+- [ ] 페이지 보안 및 네비게이션
+- [x] 스타일링
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 구현하며 중요하게 생각했던 점
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+사용자가 input 만으로 지금 내가 회원가입/로그인 진행중 어떤 부분이 잘못된 건지 인지 할 수 있다.
 
-## Learn More
+### 설치한 라이브러리
 
-To learn more about Next.js, take a look at the following resources:
+- axios : 서버와 통신
+- redux : 과제 요구 사항
+- nextui : 스타일링(스탠다드반 수업내용복습)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 질문사항
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+로그인과 회원가입 페이지 trycatch문에서
+if (error) setError(error.response.data.message); 부분에서
+'{}' 형식에 'response' 속성이 없습니다. 라는 에러가 뜹니다.
